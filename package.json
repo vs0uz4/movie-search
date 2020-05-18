@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
+    "build:tailwind": "postcss tailwind.base.css -o public/index.css",
+    "build": "NODE_ENV=production yarn build:tailwind && rollup -c",
+    "dev": "yarn build:tailwind && rollup -c -w",
     "start": "sirv public",
     "test": "jest src --watchAll"
   },
@@ -13,17 +14,20 @@
     "@babel/preset-env": "^7.9.6",
     "@rollup/plugin-commonjs": "11.0.2",
     "@rollup/plugin-node-resolve": "^7.0.0",
+    "@tailwindcss/ui": "^0.3.0",
     "@testing-library/jest-dom": "^5.7.0",
     "@testing-library/svelte": "^3.0.0",
     "axios": "^0.19.2",
     "babel-jest": "^26.0.1",
     "jest": "^26.0.1",
+    "postcss-cli": "^7.1.1",
     "rollup": "^1.20.0",
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-terser": "^5.1.2",
     "svelte": "^3.0.0",
-    "svelte-jester": "^1.0.5"
+    "svelte-jester": "^1.0.5",
+    "tailwindcss": "^1.4.6"
   },
   "dependencies": {
     "sirv-cli": "^0.4.4"
