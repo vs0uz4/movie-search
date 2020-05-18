@@ -3,7 +3,7 @@
   import MovieList from './MovieList.svelte';
 </script>
 
-<main>
+<main data-testid="movies">
   <div class="container mx-auto">
     <div class="md:mx-4">
       <MovieSearch />

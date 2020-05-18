@@ -4,13 +4,13 @@
   export let movie = [];
 </script>
 
-<div class="p-4">
+<div class="p-4" data-testid="movie-card">
   <div class="flex flex-col md:flex-row">
     <div class="flex-shrink-0">
       <img
         loading="lazy"
         class="rounded-lg md:w-56 md:rounded"
-        src={`${BACKDROP_BASE_URL}/${movie.backdrop_path}`}
+        src={`${BACKDROP_BASE_URL}${movie.backdrop_path}`}
         alt={`Poster: ${movie.title}`}
         title={`Poster: ${movie.title}`} />
     </div>
