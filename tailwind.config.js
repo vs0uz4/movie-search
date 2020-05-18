@@ -4,7 +4,10 @@ module.exports = {
     content: [
       './public/index.html',
       './src/**/*.svelte'
-    ]
+    ],
+    options: {
+      whitelist: ['bg-red-200'],
+    }
   },
   theme: {
     extend: {},
